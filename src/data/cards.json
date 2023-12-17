@@ -3,7 +3,6 @@
     "value": "Ace",
     "suit": "Hearts",
     "code": "AH",
-    "imageURL": "assets/img/cards/AH.png",
     "countValue": -1,
     "cribbageValue": 1,
     "pinochleValue": 11
@@ -12,7 +11,6 @@
     "value": "2",
     "suit": "Hearts",
     "code": "2H",
-    "imageURL": "assets/img/cards/2H.png",
     "countValue": 1,
     "cribbageValue": 2,
     "pinochleValue": 0
@@ -21,7 +19,6 @@
     "value": "3",
     "suit": "Hearts",
     "code": "3H",
-    "imageURL": "assets/img/cards/3H.png",
     "countValue": 1,
     "cribbageValue": 3,
     "pinochleValue": 0
@@ -30,7 +27,6 @@
     "value": "4",
     "suit": "Hearts",
     "code": "4H",
-    "imageURL": "assets/img/cards/4H.png",
     "countValue": 1,
     "cribbageValue": 4,
     "pinochleValue": 0
@@ -39,7 +35,6 @@
     "value": "5",
     "suit": "Hearts",
     "code": "5H",
-    "imageURL": "assets/img/cards/5H.png",
     "countValue": 1,
     "cribbageValue": 5,
     "pinochleValue": 0
@@ -48,7 +43,6 @@
     "value": "6",
     "suit": "Hearts",
     "code": "6H",
-    "imageURL": "assets/img/cards/6H.png",
     "countValue": 1,
     "cribbageValue": 6,
     "pinochleValue": 0
@@ -57,7 +51,6 @@
     "value": "7",
     "suit": "Hearts",
     "code": "7H",
-    "imageURL": "assets/img/cards/7H.png",
     "countValue": 0,
     "cribbageValue": 7,
     "pinochleValue": 0
@@ -66,7 +59,6 @@
     "value": "8",
     "suit": "Hearts",
     "code": "8H",
-    "imageURL": "assets/img/cards/8H.png",
     "countValue": 0,
     "cribbageValue": 8,
     "pinochleValue": 0
@@ -75,7 +67,6 @@
     "value": "9",
     "suit": "Hearts",
     "code": "9H",
-    "imageURL": "assets/img/cards/9H.png",
     "countValue": 0,
     "cribbageValue": 9,
     "pinochleValue": 0
@@ -83,8 +74,7 @@
   {
     "value": "10",
     "suit": "Hearts",
-    "code": "10H",
-    "imageURL": "assets/img/cards/10H.png",
+    "code": "TH",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 10
@@ -94,7 +84,6 @@
     "value": "Jack",
     "suit": "Hearts",
     "code": "JH",
-    "imageURL": "assets/img/cards/JH.png",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 2
@@ -103,7 +92,6 @@
     "value": "Queen",
     "suit": "Hearts",
     "code": "QH",
-    "imageURL": "assets/img/cards/QH.png",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 3
@@ -112,7 +100,6 @@
     "value": "King",
     "suit": "Hearts",
     "code": "KH",
-    "imageURL": "assets/img/cards/KH.png",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 4
@@ -122,7 +109,6 @@
     "value": "Ace",
     "suit": "Diamonds",
     "code": "AD",
-    "imageURL": "assets/img/cards/AD.png",
     "countValue": -1,
     "cribbageValue": 1,
     "pinochleValue": 11
@@ -131,7 +117,6 @@
     "value": "2",
     "suit": "Diamonds",
     "code": "2D",
-    "imageURL": "assets/img/cards/2D.png",
     "countValue": 1,
     "cribbageValue": 2,
     "pinochleValue": 0
@@ -140,7 +125,6 @@
     "value": "3",
     "suit": "Diamonds",
     "code": "3D",
-    "imageURL": "assets/img/cards/3D.png",
     "countValue": 1,
     "cribbageValue": 3,
     "pinochleValue": 0
@@ -149,7 +133,6 @@
     "value": "4",
     "suit": "Diamonds",
     "code": "4D",
-    "imageURL": "assets/img/cards/4D.png",
     "countValue": 1,
     "cribbageValue": 4,
     "pinochleValue": 0
@@ -158,7 +141,6 @@
     "value": "5",
     "suit": "Diamonds",
     "code": "5D",
-    "imageURL": "assets/img/cards/5D.png",
     "countValue": 1,
     "cribbageValue": 5,
     "pinochleValue": 0
@@ -167,7 +149,6 @@
     "value": "6",
     "suit": "Diamonds",
     "code": "6D",
-    "imageURL": "assets/img/cards/6D.png",
     "countValue": 1,
     "cribbageValue": 6,
     "pinochleValue": 0
@@ -176,7 +157,6 @@
     "value": "7",
     "suit": "Diamonds",
     "code": "7D",
-    "imageURL": "assets/img/cards/7D.png",
     "countValue": 0,
     "cribbageValue": 7,
     "pinochleValue": 0
@@ -185,7 +165,6 @@
     "value": "8",
     "suit": "Diamonds",
     "code": "8D",
-    "imageURL": "assets/img/cards/8D.png",
     "countValue": 0,
     "cribbageValue": 8,
     "pinochleValue": 0
@@ -194,7 +173,6 @@
     "value": "9",
     "suit": "Diamonds",
     "code": "9D",
-    "imageURL": "assets/img/cards/9D.png",
     "countValue": 0,
     "cribbageValue": 9,
     "pinochleValue": 0
@@ -202,8 +180,7 @@
   {
     "value": "10",
     "suit": "Diamonds",
-    "code": "10D",
-    "imageURL": "assets/img/cards/10D.png",
+    "code": "TD",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 10
@@ -213,7 +190,6 @@
     "value": "Jack",
     "suit": "Diamonds",
     "code": "JD",
-    "imageURL": "assets/img/cards/JD.png",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 2
@@ -222,7 +198,6 @@
     "value": "Queen",
     "suit": "Diamonds",
     "code": "QD",
-    "imageURL": "assets/img/cards/QD.png",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 3
@@ -231,7 +206,6 @@
     "value": "King",
     "suit": "Diamonds",
     "code": "KD",
-    "imageURL": "assets/img/cards/KD.png",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 4
@@ -241,7 +215,6 @@
     "value": "Ace",
     "suit": "Spades",
     "code": "AS",
-    "imageURL": "assets/img/cards/AS.png",
     "countValue": -1,
     "cribbageValue": 1,
     "pinochleValue": 11
@@ -250,7 +223,6 @@
     "value": "2",
     "suit": "Spades",
     "code": "2S",
-    "imageURL": "assets/img/cards/2S.png",
     "countValue": 1,
     "cribbageValue": 2,
     "pinochleValue": 0
@@ -259,7 +231,6 @@
     "value": "3",
     "suit": "Spades",
     "code": "3S",
-    "imageURL": "assets/img/cards/3S.png",
     "countValue": 1,
     "cribbageValue": 3,
     "pinochleValue": 0
@@ -268,7 +239,6 @@
     "value": "4",
     "suit": "Spades",
     "code": "4S",
-    "imageURL": "assets/img/cards/4S.png",
     "countValue": 1,
     "cribbageValue": 4,
     "pinochleValue": 0
@@ -277,7 +247,6 @@
     "value": "5",
     "suit": "Spades",
     "code": "5S",
-    "imageURL": "assets/img/cards/5S.png",
     "countValue": 1,
     "cribbageValue": 5,
     "pinochleValue": 0
@@ -286,7 +255,6 @@
     "value": "6",
     "suit": "Spades",
     "code": "6S",
-    "imageURL": "assets/img/cards/6S.png",
     "countValue": 1,
     "cribbageValue": 6,
     "pinochleValue": 0
@@ -295,7 +263,6 @@
     "value": "7",
     "suit": "Spades",
     "code": "7S",
-    "imageURL": "assets/img/cards/7S.png",
     "countValue": 0,
     "cribbageValue": 7,
     "pinochleValue": 0
@@ -304,7 +271,6 @@
     "value": "8",
     "suit": "Spades",
     "code": "8S",
-    "imageURL": "assets/img/cards/8S.png",
     "countValue": 0,
     "cribbageValue": 8,
     "pinochleValue": 0
@@ -313,7 +279,6 @@
     "value": "9",
     "suit": "Spades",
     "code": "9S",
-    "imageURL": "assets/img/cards/9S.png",
     "countValue": 0,
     "cribbageValue": 9,
     "pinochleValue": 0
@@ -321,8 +286,7 @@
   {
     "value": "10",
     "suit": "Spades",
-    "code": "10S",
-    "imageURL": "assets/img/cards/10S.png",
+    "code": "TS",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 10
@@ -332,7 +296,6 @@
     "value": "Jack",
     "suit": "Spades",
     "code": "JS",
-    "imageURL": "assets/img/cards/JS.png",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 2
@@ -341,7 +304,6 @@
     "value": "Queen",
     "suit": "Spades",
     "code": "QS",
-    "imageURL": "assets/img/cards/QS.png",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 3
@@ -350,7 +312,6 @@
     "value": "King",
     "suit": "Spades",
     "code": "KS",
-    "imageURL": "assets/img/cards/KS.png",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 4
@@ -360,7 +321,6 @@
     "value": "Ace",
     "suit": "Clubs",
     "code": "AC",
-    "imageURL": "assets/img/cards/AC.png",
     "countValue": -1,
     "cribbageValue": 1,
     "pinochleValue": 11
@@ -369,7 +329,6 @@
     "value": "2",
     "suit": "Clubs",
     "code": "2C",
-    "imageURL": "assets/img/cards/2C.png",
     "countValue": 1,
     "cribbageValue": 2,
     "pinochleValue": 0
@@ -378,7 +337,6 @@
     "value": "3",
     "suit": "Clubs",
     "code": "3C",
-    "imageURL": "assets/img/cards/3C.png",
     "countValue": 1,
     "cribbageValue": 3,
     "pinochleValue": 0
@@ -387,7 +345,6 @@
     "value": "4",
     "suit": "Clubs",
     "code": "4C",
-    "imageURL": "assets/img/cards/4C.png",
     "countValue": 1,
     "cribbageValue": 4,
     "pinochleValue": 0
@@ -396,7 +353,6 @@
     "value": "5",
     "suit": "Clubs",
     "code": "5C",
-    "imageURL": "assets/img/cards/5C.png",
     "countValue": 1,
     "cribbageValue": 5,
     "pinochleValue": 0
@@ -405,7 +361,6 @@
     "value": "6",
     "suit": "Clubs",
     "code": "6C",
-    "imageURL": "assets/img/cards/6C.png",
     "countValue": 1,
     "cribbageValue": 6,
     "pinochleValue": 0
@@ -414,7 +369,6 @@
     "value": "7",
     "suit": "Clubs",
     "code": "7C",
-    "imageURL": "assets/img/cards/7C.png",
     "countValue": 0,
     "cribbageValue": 7,
     "pinochleValue": 0
@@ -423,7 +377,6 @@
     "value": "8",
     "suit": "Clubs",
     "code": "8C",
-    "imageURL": "assets/img/cards/8C.png",
     "countValue": 0,
     "cribbageValue": 8,
     "pinochleValue": 0
@@ -432,7 +385,6 @@
     "value": "9",
     "suit": "Clubs",
     "code": "9C",
-    "imageURL": "assets/img/cards/9C.png",
     "countValue": 0,
     "cribbageValue": 9,
     "pinochleValue": 0
@@ -440,8 +392,7 @@
   {
     "value": "10",
     "suit": "Clubs",
-    "code": "10C",
-    "imageURL": "assets/img/cards/10C.png",
+    "code": "TC",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 10
@@ -451,7 +402,6 @@
     "value": "Jack",
     "suit": "Clubs",
     "code": "JC",
-    "imageURL": "assets/img/cards/JC.png",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 2
@@ -460,7 +410,6 @@
     "value": "Queen",
     "suit": "Clubs",
     "code": "QC",
-    "imageURL": "assets/img/cards/QC.png",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 3
@@ -469,7 +418,6 @@
     "value": "King",
     "suit": "Clubs",
     "code": "KC",
-    "imageURL": "assets/img/cards/KC.png",
     "countValue": -1,
     "cribbageValue": 10,
     "pinochleValue": 4

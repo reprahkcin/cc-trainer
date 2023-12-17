@@ -2,11 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="card">
-          <!-- Use v-if to ensure the image is only attempted to be loaded when drawnCard exists -->
-          <img v-if="drawnCard" :src="drawnCardImage" alt="Drawn Card" />
-          <!-- Display the image URL for debugging or additional information -->
-          <div v-if="drawnCard">{{ drawnCard.imageURL }}</div>
+        <div class="card p-0">
+          <!-- Display card image here -->
+          <img :src="drawnCardImage" alt="" class="playing-card" />
         </div>
         <button class="btn btn-primary" @click="drawAndDisplayCard">
           Draw Card
@@ -25,17 +23,16 @@ export default {
       drawnCard: null,
       playedCards: [],
       deck: [],
+      isDrawing: false,
     };
   },
   computed: {
     ...mapGetters(["getShuffledDeck"]),
     drawnCardImage() {
-      // Check if drawnCard exists and has an imageURL
-      if (this.drawnCard && this.drawnCard.imageURL) {
-        // Use require to resolve the path to the actual image in the assets folder
-        return require("@/assets/" + this.drawnCard.imageURL); // Adjust the path based on your project structure
+      if (this.drawnCard) {
+        return require(`@/assets/img/cards/${this.drawnCard.code}.png`);
       }
-      return null; // Return null or a placeholder image if no card is drawn
+      return ""; // Return an empty string if no card is drawn
     },
   },
   created() {
@@ -43,11 +40,31 @@ export default {
   },
   methods: {
     drawAndDisplayCard() {
-      if (this.deck.length > 0) {
-        this.drawnCard = this.deck.pop();
+      if (this.deck.length > 0 && !this.isDrawing) {
+        this.isDrawing = true;
+        // Draw a card from the deck
+        const drawnIndex = Math.floor(Math.random() * this.deck.length);
+        this.drawnCard = this.deck[drawnIndex];
+
+        // Add the card to the playedCards array
         this.playedCards.push(this.drawnCard);
+
+        // Remove the card from the deck
+        this.deck.splice(drawnIndex, 1);
+
+        // Reset the isDrawing flag
+        this.isDrawing = false;
+      } else {
+        return;
       }
     },
   },
 };
 </script>
+
+<style>
+.playing-card {
+  width: 200px;
+  height: 300px;
+}
+</style>
