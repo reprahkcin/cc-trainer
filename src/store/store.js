@@ -22,7 +22,6 @@ export default createStore({
         }
     },
     getters: {
-    
         getUnshuffledDeck: (state) => {
             return state.cards
         },
