@@ -68,9 +68,13 @@ export default {
     ...mapGetters(["getShuffledDeck"]),
     drawnCardImage() {
       if (this.drawnCard) {
-        return require(`@/assets/img/cards/${this.drawnCard.code}.png`);
+        if(this.deck.length === 0 || this.deck.length === 52){
+          return require('@/assets/img/cards/draw.png');
+        } else{
+          return require(`@/assets/img/cards/${this.drawnCard.code}.png`);
+        } 
       }
-      return ""; // Return an empty string if no card is drawn
+      return require('@/assets/img/cards/draw.png'); 
     },
   },
   created() {
