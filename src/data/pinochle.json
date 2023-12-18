@@ -1,0 +1,290 @@
+[
+  {
+    "id": 0,
+    "value": "9",
+    "suit": "Hearts",
+    "code": "9H"
+  },
+  {
+    "id": 1,
+    "value": "9",
+    "suit": "Hearts",
+    "code": "9H"
+  },
+  {
+    "id": 2,
+    "value": "10",
+    "suit": "Hearts",
+    "code": "TH"
+  },
+  {
+    "id": 3,
+    "value": "10",
+    "suit": "Hearts",
+    "code": "TH"
+  },
+  {
+    "id": 4,
+    "value": "Jack",
+    "suit": "Hearts",
+    "code": "JH"
+  },
+  {
+    "id": 5,
+    "value": "Jack",
+    "suit": "Hearts",
+    "code": "JH"
+  },
+  {
+    "id": 6,
+    "value": "Queen",
+    "suit": "Hearts",
+    "code": "QH"
+  },
+  {
+    "id": 7,
+    "value": "Queen",
+    "suit": "Hearts",
+    "code": "QH"
+  },
+  {
+    "id": 8,
+    "value": "King",
+    "suit": "Hearts",
+    "code": "KH"
+  },
+  {
+    "id": 9,
+    "value": "King",
+    "suit": "Hearts",
+    "code": "KH"
+  },
+  {
+    "id": 10,
+    "value": "Ace",
+    "suit": "Hearts",
+    "code": "AH"
+  },
+  {
+    "id": 11,
+    "value": "Ace",
+    "suit": "Hearts",
+    "code": "AH"
+  },
+  {
+    "id": 12,
+    "value": "9",
+    "suit": "Clubs",
+    "code": "9C"
+  },
+  {
+    "id": 13,
+    "value": "9",
+    "suit": "Clubs",
+    "code": "9C"
+  },
+  {
+    "id": 14,
+    "value": "10",
+    "suit": "Clubs",
+    "code": "TC"
+  },
+  {
+    "id": 15,
+    "value": "10",
+    "suit": "Clubs",
+    "code": "TC"
+  },
+  {
+    "id": 16,
+    "value": "Jack",
+    "suit": "Clubs",
+    "code": "JC"
+  },
+  {
+    "id": 17,
+    "value": "Jack",
+    "suit": "Clubs",
+    "code": "JC"
+  },
+  {
+    "id": 18,
+    "value": "Queen",
+    "suit": "Clubs",
+    "code": "QC"
+  },
+  {
+    "id": 19,
+    "value": "Queen",
+    "suit": "Clubs",
+    "code": "QC"
+  },
+  {
+    "id": 20,
+    "value": "King",
+    "suit": "Clubs",
+    "code": "KC"
+  },
+  {
+    "id": 21,
+    "value": "King",
+    "suit": "Clubs",
+    "code": "KC"
+  },
+  {
+    "id": 22,
+    "value": "Ace",
+    "suit": "Clubs",
+    "code": "AC"
+  },
+  {
+    "id": 23,
+    "value": "Ace",
+    "suit": "Clubs",
+    "code": "AC"
+  },
+  {
+    "id": 24,
+    "value": "9",
+    "suit": "Diamonds",
+    "code": "9D"
+  },
+  {
+    "id": 25,
+    "value": "9",
+    "suit": "Diamonds",
+    "code": "9D"
+  },
+  {
+    "id": 26,
+    "value": "10",
+    "suit": "Diamonds",
+    "code": "TD"
+  },
+  {
+    "id": 27,
+    "value": "10",
+    "suit": "Diamonds",
+    "code": "TD"
+  },
+  {
+    "id": 28,
+    "value": "Jack",
+    "suit": "Diamonds",
+    "code": "JD"
+  },
+  {
+    "id": 29,
+    "value": "Jack",
+    "suit": "Diamonds",
+    "code": "JD"
+  },
+  {
+    "id": 30,
+    "value": "Queen",
+    "suit": "Diamonds",
+    "code": "QD"
+  },
+  {
+    "id": 31,
+    "value": "Queen",
+    "suit": "Diamonds",
+    "code": "QD"
+  },
+  {
+    "id": 32,
+    "value": "King",
+    "suit": "Diamonds",
+    "code": "KD"
+  },
+  {
+    "id": 33,
+    "value": "King",
+    "suit": "Diamonds",
+    "code": "KD"
+  },
+  {
+    "id": 34,
+    "value": "Ace",
+    "suit": "Diamonds",
+    "code": "AD"
+  },
+  {
+    "id": 35,
+    "value": "Ace",
+    "suit": "Diamonds",
+    "code": "AD"
+  },
+  {
+    "id": 36,
+    "value": "9",
+    "suit": "Spades",
+    "code": "9S"
+  },
+  {
+    "id": 37,
+    "value": "9",
+    "suit": "Spades",
+    "code": "9S"
+  },
+  {
+    "id": 38,
+    "value": "10",
+    "suit": "Spades",
+    "code": "TS"
+  },
+  {
+    "id": 39,
+    "value": "10",
+    "suit": "Spades",
+    "code": "TS"
+  },
+  {
+    "id": 40,
+    "value": "Jack",
+    "suit": "Spades",
+    "code": "JS"
+  },
+  {
+    "id": 41,
+    "value": "Jack",
+    "suit": "Spades",
+    "code": "JS"
+  },
+  {
+    "id": 42,
+    "value": "Queen",
+    "suit": "Spades",
+    "code": "QS"
+  },
+  {
+    "id": 43,
+    "value": "Queen",
+    "suit": "Spades",
+    "code": "QS"
+  },
+  {
+    "id": 44,
+    "value": "King",
+    "suit": "Spades",
+    "code": "KS"
+  },
+  {
+    "id": 45,
+    "value": "King",
+    "suit": "Spades",
+    "code": "KS"
+  },
+  {
+    "id": 46,
+    "value": "Ace",
+    "suit": "Spades",
+    "code": "AS"
+  },
+  {
+    "id": 47,
+    "value": "Ace",
+    "suit": "Spades",
+    "code": "AS"
+  }
+]

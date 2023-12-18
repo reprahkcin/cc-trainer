@@ -19,3 +19,4 @@ app.mount('#app');
 
 // Dispatch the 'shuffleDeck' action after mounting
 store.dispatch('shuffleDeck');
+store.dispatch('shufflePinochle');

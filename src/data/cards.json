@@ -4,80 +4,70 @@
     "suit": "Hearts",
     "code": "AH",
     "countValue": -1,
-    "cribbageValue": 1,
-    "pinochleValue": 11
+    "cribbageValue": 1
   },
   {
     "value": "2",
     "suit": "Hearts",
     "code": "2H",
     "countValue": 1,
-    "cribbageValue": 2,
-    "pinochleValue": 0
+    "cribbageValue": 2
   },
   {
     "value": "3",
     "suit": "Hearts",
     "code": "3H",
     "countValue": 1,
-    "cribbageValue": 3,
-    "pinochleValue": 0
+    "cribbageValue": 3
   },
   {
     "value": "4",
     "suit": "Hearts",
     "code": "4H",
     "countValue": 1,
-    "cribbageValue": 4,
-    "pinochleValue": 0
+    "cribbageValue": 4
   },
   {
     "value": "5",
     "suit": "Hearts",
     "code": "5H",
     "countValue": 1,
-    "cribbageValue": 5,
-    "pinochleValue": 0
+    "cribbageValue": 5
   },
   {
     "value": "6",
     "suit": "Hearts",
     "code": "6H",
     "countValue": 1,
-    "cribbageValue": 6,
-    "pinochleValue": 0
+    "cribbageValue": 6
   },
   {
     "value": "7",
     "suit": "Hearts",
     "code": "7H",
     "countValue": 0,
-    "cribbageValue": 7,
-    "pinochleValue": 0
+    "cribbageValue": 7
   },
   {
     "value": "8",
     "suit": "Hearts",
     "code": "8H",
     "countValue": 0,
-    "cribbageValue": 8,
-    "pinochleValue": 0
+    "cribbageValue": 8
   },
   {
     "value": "9",
     "suit": "Hearts",
     "code": "9H",
     "countValue": 0,
-    "cribbageValue": 9,
-    "pinochleValue": 0
+    "cribbageValue": 9
   },
   {
     "value": "10",
     "suit": "Hearts",
     "code": "TH",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 10
+    "cribbageValue": 10
   },
 
   {
@@ -85,24 +75,21 @@
     "suit": "Hearts",
     "code": "JH",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 2
+    "cribbageValue": 10
   },
   {
     "value": "Queen",
     "suit": "Hearts",
     "code": "QH",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 3
+    "cribbageValue": 10
   },
   {
     "value": "King",
     "suit": "Hearts",
     "code": "KH",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 4
+    "cribbageValue": 10
   },
 
   {
@@ -110,80 +97,70 @@
     "suit": "Diamonds",
     "code": "AD",
     "countValue": -1,
-    "cribbageValue": 1,
-    "pinochleValue": 11
+    "cribbageValue": 1
   },
   {
     "value": "2",
     "suit": "Diamonds",
     "code": "2D",
     "countValue": 1,
-    "cribbageValue": 2,
-    "pinochleValue": 0
+    "cribbageValue": 2
   },
   {
     "value": "3",
     "suit": "Diamonds",
     "code": "3D",
     "countValue": 1,
-    "cribbageValue": 3,
-    "pinochleValue": 0
+    "cribbageValue": 3
   },
   {
     "value": "4",
     "suit": "Diamonds",
     "code": "4D",
     "countValue": 1,
-    "cribbageValue": 4,
-    "pinochleValue": 0
+    "cribbageValue": 4
   },
   {
     "value": "5",
     "suit": "Diamonds",
     "code": "5D",
     "countValue": 1,
-    "cribbageValue": 5,
-    "pinochleValue": 0
+    "cribbageValue": 5
   },
   {
     "value": "6",
     "suit": "Diamonds",
     "code": "6D",
     "countValue": 1,
-    "cribbageValue": 6,
-    "pinochleValue": 0
+    "cribbageValue": 6
   },
   {
     "value": "7",
     "suit": "Diamonds",
     "code": "7D",
     "countValue": 0,
-    "cribbageValue": 7,
-    "pinochleValue": 0
+    "cribbageValue": 7
   },
   {
     "value": "8",
     "suit": "Diamonds",
     "code": "8D",
     "countValue": 0,
-    "cribbageValue": 8,
-    "pinochleValue": 0
+    "cribbageValue": 8
   },
   {
     "value": "9",
     "suit": "Diamonds",
     "code": "9D",
     "countValue": 0,
-    "cribbageValue": 9,
-    "pinochleValue": 0
+    "cribbageValue": 9
   },
   {
     "value": "10",
     "suit": "Diamonds",
     "code": "TD",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 10
+    "cribbageValue": 10
   },
 
   {
@@ -191,24 +168,21 @@
     "suit": "Diamonds",
     "code": "JD",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 2
+    "cribbageValue": 10
   },
   {
     "value": "Queen",
     "suit": "Diamonds",
     "code": "QD",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 3
+    "cribbageValue": 10
   },
   {
     "value": "King",
     "suit": "Diamonds",
     "code": "KD",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 4
+    "cribbageValue": 10
   },
 
   {
@@ -216,80 +190,70 @@
     "suit": "Spades",
     "code": "AS",
     "countValue": -1,
-    "cribbageValue": 1,
-    "pinochleValue": 11
+    "cribbageValue": 1
   },
   {
     "value": "2",
     "suit": "Spades",
     "code": "2S",
     "countValue": 1,
-    "cribbageValue": 2,
-    "pinochleValue": 0
+    "cribbageValue": 2
   },
   {
     "value": "3",
     "suit": "Spades",
     "code": "3S",
     "countValue": 1,
-    "cribbageValue": 3,
-    "pinochleValue": 0
+    "cribbageValue": 3
   },
   {
     "value": "4",
     "suit": "Spades",
     "code": "4S",
     "countValue": 1,
-    "cribbageValue": 4,
-    "pinochleValue": 0
+    "cribbageValue": 4
   },
   {
     "value": "5",
     "suit": "Spades",
     "code": "5S",
     "countValue": 1,
-    "cribbageValue": 5,
-    "pinochleValue": 0
+    "cribbageValue": 5
   },
   {
     "value": "6",
     "suit": "Spades",
     "code": "6S",
     "countValue": 1,
-    "cribbageValue": 6,
-    "pinochleValue": 0
+    "cribbageValue": 6
   },
   {
     "value": "7",
     "suit": "Spades",
     "code": "7S",
     "countValue": 0,
-    "cribbageValue": 7,
-    "pinochleValue": 0
+    "cribbageValue": 7
   },
   {
     "value": "8",
     "suit": "Spades",
     "code": "8S",
     "countValue": 0,
-    "cribbageValue": 8,
-    "pinochleValue": 0
+    "cribbageValue": 8
   },
   {
     "value": "9",
     "suit": "Spades",
     "code": "9S",
     "countValue": 0,
-    "cribbageValue": 9,
-    "pinochleValue": 0
+    "cribbageValue": 9
   },
   {
     "value": "10",
     "suit": "Spades",
     "code": "TS",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 10
+    "cribbageValue": 10
   },
 
   {
@@ -297,24 +261,21 @@
     "suit": "Spades",
     "code": "JS",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 2
+    "cribbageValue": 10
   },
   {
     "value": "Queen",
     "suit": "Spades",
     "code": "QS",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 3
+    "cribbageValue": 10
   },
   {
     "value": "King",
     "suit": "Spades",
     "code": "KS",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 4
+    "cribbageValue": 10
   },
 
   {
@@ -322,80 +283,70 @@
     "suit": "Clubs",
     "code": "AC",
     "countValue": -1,
-    "cribbageValue": 1,
-    "pinochleValue": 11
+    "cribbageValue": 1
   },
   {
     "value": "2",
     "suit": "Clubs",
     "code": "2C",
     "countValue": 1,
-    "cribbageValue": 2,
-    "pinochleValue": 0
+    "cribbageValue": 2
   },
   {
     "value": "3",
     "suit": "Clubs",
     "code": "3C",
     "countValue": 1,
-    "cribbageValue": 3,
-    "pinochleValue": 0
+    "cribbageValue": 3
   },
   {
     "value": "4",
     "suit": "Clubs",
     "code": "4C",
     "countValue": 1,
-    "cribbageValue": 4,
-    "pinochleValue": 0
+    "cribbageValue": 4
   },
   {
     "value": "5",
     "suit": "Clubs",
     "code": "5C",
     "countValue": 1,
-    "cribbageValue": 5,
-    "pinochleValue": 0
+    "cribbageValue": 5
   },
   {
     "value": "6",
     "suit": "Clubs",
     "code": "6C",
     "countValue": 1,
-    "cribbageValue": 6,
-    "pinochleValue": 0
+    "cribbageValue": 6
   },
   {
     "value": "7",
     "suit": "Clubs",
     "code": "7C",
     "countValue": 0,
-    "cribbageValue": 7,
-    "pinochleValue": 0
+    "cribbageValue": 7
   },
   {
     "value": "8",
     "suit": "Clubs",
     "code": "8C",
     "countValue": 0,
-    "cribbageValue": 8,
-    "pinochleValue": 0
+    "cribbageValue": 8
   },
   {
     "value": "9",
     "suit": "Clubs",
     "code": "9C",
     "countValue": 0,
-    "cribbageValue": 9,
-    "pinochleValue": 0
+    "cribbageValue": 9
   },
   {
     "value": "10",
     "suit": "Clubs",
     "code": "TC",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 10
+    "cribbageValue": 10
   },
 
   {
@@ -403,23 +354,20 @@
     "suit": "Clubs",
     "code": "JC",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 2
+    "cribbageValue": 10
   },
   {
     "value": "Queen",
     "suit": "Clubs",
     "code": "QC",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 3
+    "cribbageValue": 10
   },
   {
     "value": "King",
     "suit": "Clubs",
     "code": "KC",
     "countValue": -1,
-    "cribbageValue": 10,
-    "pinochleValue": 4
+    "cribbageValue": 10
   }
 ]
