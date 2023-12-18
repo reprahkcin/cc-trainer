@@ -3,6 +3,7 @@ import App from '@/App.vue'
 import store from '@/store/store.js'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 // Import the router from /src/router/index.js
 import router from '@/router/index.js'

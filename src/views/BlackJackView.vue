@@ -2,16 +2,16 @@
 <div class="container">
     <div class="row">
       <div class="col">
-        <div class="card d-inline-block w-100 text-center mb-3 ">
+        <div class="card d-inline-block w-100 text-center mb-3">
           <div v-if="!drawnCardImage" class="playing-card">
-            <div class="playing-card">
-              <div class="centered-text">
+            <div class="playing-card rounded my-3 shadow text-center">
+              
                 <p>Draw a Card</p>
-              </div>
+              
             </div>
           </div>
-        <img v-else :src="drawnCardImage" alt="" class="playing-card rounded my-3 shadow" />
-      </div>
+          <img v-else :src="drawnCardImage" alt="" class="playing-card rounded my-3 shadow" />
+        </div>
         <div class="btn-group w-100">
           <button
             :disabled="deck.length <= 0 ? true : false"
@@ -40,7 +40,7 @@
             <p class="card-text">
               <ul>
                 <li v-for="card in playedCards" :key="card.code">
-                  {{ card.value }} of {{ suitIcon(card.suit) }}
+                  {{ card.value }} of <span :class="suitIcon(card.suit)"></span>
                 </li>
               </ul>
             </p>
@@ -113,14 +113,14 @@ export default {
     },
       suitIcon(suit) {
         switch (suit) {
-          case "HEARTS":
-            return "♥";
-          case "SPADES":
-            return "♠";
-          case "CLUBS":
-            return "♣";
-          case "DIAMONDS":
-            return "♦";
+          case "Hearts":
+            return "bi-suit-heart-fill text-danger";
+          case "Spades":
+            return "bi-suit-spade-fill text-dark";
+          case "Clubs":
+            return "bi-suit-club-fill text-dark";
+          case "Diamonds":
+            return "bi-suit-diamond-fill text-danger";
           default:
             return "";
         }
