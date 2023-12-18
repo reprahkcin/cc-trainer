@@ -1,16 +1,13 @@
 <template>
-<div class="container">
-    <div class="row">
+  <div class="container">
+    <div class="row h-100">
       <div class="col">
-        <div class="card d-inline-block w-100 text-center mb-3">
-          <div v-if="!drawnCardImage" class="playing-card">
-            <div class="playing-card rounded my-3 shadow text-center">
-              
-                <p>Draw a Card</p>
-              
-            </div>
-          </div>
-          <img v-else :src="drawnCardImage" alt="" class="playing-card rounded my-3 shadow" />
+        <div class="card d-inline-block w-100 text-center mb-3 bg-success">
+          <img
+            :src="drawnCardImage"
+            alt=""
+            class="playing-card rounded my-3 shadow"
+          />
         </div>
         <div class="btn-group w-100">
           <button
@@ -25,25 +22,42 @@
           </button>
         </div>
       </div>
-      <div class="col">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Running Count</h5>
-            <p class="card-text">{{ runningCount }}</p>
-            <h5 class="card-title">Cards Left</h5>
-            <p class="card-text">{{ deck.length }}</p>
+
+      <div class="col d-flex flex-column">
+        <div class="row">
+          <!-- Top row with auto height -->
+          <div class="col mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Running Count</h5>
+                <p class="card-text">{{ runningCount }}</p>
+                <h5 class="card-title">Cards Left</h5>
+                <p class="card-text">{{ deck.length }}</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Played Cards</h5>
-            <p class="card-text">
-              <ul>
-                <li v-for="card in playedCards" :key="card.code">
-                  {{ card.value }} of <span :class="suitIcon(card.suit)"></span>
-                </li>
-              </ul>
-            </p>
+        <!-- Bottom row with remaining vertical space and scrollable list -->
+        <div class="row flex-grow-1">
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-header">
+                <h5>Played Cards</h5>
+              </div>
+              <div
+                class="card-body"
+                style="overflow-y: scroll; max-height: 158px"
+              >
+                <div>
+                  <ul>
+                    <li v-for="card in playedCards" :key="card.code">
+                      {{ card.value }} of
+                      <span :class="suitIcon(card.suit)"></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -61,20 +75,20 @@ export default {
       playedCards: [],
       deck: [],
       isDrawing: false,
-      runningCount: 0
+      runningCount: 0,
     };
   },
   computed: {
     ...mapGetters(["getShuffledDeck"]),
     drawnCardImage() {
       if (this.drawnCard) {
-        if(this.deck.length === 0 || this.deck.length === 52){
-          return require('@/assets/img/cards/draw.png');
-        } else{
+        if (this.deck.length === 0 || this.deck.length === 52) {
+          return require("@/assets/img/cards/draw.png");
+        } else {
           return require(`@/assets/img/cards/${this.drawnCard.code}.png`);
-        } 
+        }
       }
-      return require('@/assets/img/cards/draw.png'); 
+      return require("@/assets/img/cards/draw.png");
     },
   },
   created() {
@@ -115,21 +129,20 @@ export default {
     updateRunningCount(count) {
       this.runningCount += count;
     },
-      suitIcon(suit) {
-        switch (suit) {
-          case "Hearts":
-            return "bi-suit-heart-fill text-danger";
-          case "Spades":
-            return "bi-suit-spade-fill text-dark";
-          case "Clubs":
-            return "bi-suit-club-fill text-dark";
-          case "Diamonds":
-            return "bi-suit-diamond-fill text-danger";
-          default:
-            return "";
-        }
+    suitIcon(suit) {
+      switch (suit) {
+        case "Hearts":
+          return "bi-suit-heart-fill text-danger";
+        case "Spades":
+          return "bi-suit-spade-fill text-dark";
+        case "Clubs":
+          return "bi-suit-club-fill text-dark";
+        case "Diamonds":
+          return "bi-suit-diamond-fill text-danger";
+        default:
+          return "";
       }
-
+    },
   },
 };
 </script>
@@ -138,12 +151,5 @@ export default {
 .playing-card {
   width: 200px;
   height: 300px;
-  background-color: grey ;
-}
-.centered-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 </style>

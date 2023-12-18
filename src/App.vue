@@ -1,6 +1,12 @@
 <template>
   <div class="container">
-    <router-view class="card my-2 p-3"></router-view>
+    <div class="row">
+      <div class="col h-100">
+        <router-view class="card my-3 p-3 h-100"></router-view>
+      </div>
+    </div>
+  </div>
+  <div class="container">
     <div class="row">
       <div class="col">
         <div class="card p-3">
