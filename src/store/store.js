@@ -42,10 +42,10 @@ export default createStore({
         getShuffledDeck: (state) => {
             return state.shuffledDeck
         },
-        getUnshuffledPinochle: (state) => {
+        getUnshuffledPinochleDeck: (state) => {
             return state.pinochle
         },
-        getPinochleDeck: (state) => {
+        getShuffledPinochleDeck: (state) => {
             return state.pinochleDeck
         }
 
