@@ -20,10 +20,10 @@
     <div class="form-group">
       <label for="trumpSuitSelect">Trump Suit:</label>
       <select class="form-control" id="trumpSuitSelect" v-model="trumpSuit">
-        <option value="spades">Spades</option>
-        <option value="hearts">Hearts</option>
-        <option value="clubs">Clubs</option>
-        <option value="diamonds">Diamonds</option>
+        <option value="Spades">Spades</option>
+        <option value="Hearts">Hearts</option>
+        <option value="Clubs">Clubs</option>
+        <option value="Diamonds">Diamonds</option>
       </select>
     </div>
 
@@ -97,6 +97,24 @@ export default {
   methods: {
     ...mapActions(["shufflePinochleDeck"]),
     dealNewHand() {
+      // Reset meld score
+      this.meldScore = {
+        pinochle: 0,
+        doublePinochle: 0,
+        acesAround: 0,
+        doubleAcesAround: 0,
+        kingsAround: 0,
+        doubleKingsAround: 0,
+        queensAround: 0,
+        doubleQueensAround: 0,
+        jacksAround: 0,
+        doubleJacksAround: 0,
+        commonMarriages: 0,
+        royalMarriages: 0,
+        dix: 0,
+        run: 0,
+        doubleRun: 0,
+      };
       // This is the hand as it was dealt, shuffled but not sorted
       this.shufflePinochleDeck(); // Shuffle the deck
       this.isSorted = false; // Reset the sorted flag
