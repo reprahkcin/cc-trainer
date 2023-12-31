@@ -29,6 +29,7 @@
 
     <div class="score">
       <p>Meld Points:</p>
+      <pre>{{ meldScore }}</pre>
       <!-- Additional analysis and breakdown can be displayed here -->
     </div>
     <!-- You can iterate over the hand and display each card with Bootstrap Icons -->
@@ -68,6 +69,23 @@ export default {
         hearts: 0,
         diamonds: 0,
         clubs: 0,
+      },
+      meldScore: {
+        pinochle: 0,
+        doublePinochle: 0,
+        acesAround: 0,
+        doubleAcesAround: 0,
+        kingsAround: 0,
+        doubleKingsAround: 0,
+        queensAround: 0,
+        doubleQueensAround: 0,
+        jacksAround: 0,
+        doubleJacksAround: 0,
+        commonMarriages: 0,
+        royalMarriages: 0,
+        dix: 0,
+        run: 0,
+        doubleRun: 0,
       },
     };
   },
@@ -144,6 +162,7 @@ export default {
           score += 2;
         }
       });
+      this.meldScore.commonMarriages = score;
       return score;
     },
     lookForPinochles() {
@@ -156,6 +175,7 @@ export default {
       const hasQueenOfSpades = this.hand.some(
         (card) => card.value === "Queen" && card.suit === "Spades"
       );
+      this.meldScore.pinochle = hasJackOfDiamonds && hasQueenOfSpades ? 4 : 0;
       return hasJackOfDiamonds && hasQueenOfSpades ? 4 : 0;
     },
     lookForDoublePinochles() {
@@ -168,6 +188,8 @@ export default {
       const countQueenOfSpades = this.hand.filter(
         (card) => card.value === "Queen" && card.suit === "Spades"
       ).length;
+      this.meldScore.doublePinochle =
+        countJackOfDiamonds >= 2 && countQueenOfSpades >= 2 ? 30 : 0;
       return countJackOfDiamonds >= 2 && countQueenOfSpades >= 2 ? 30 : 0;
     },
     lookForAcesAround() {
@@ -178,6 +200,7 @@ export default {
       const hasAllAces = suits.every((suit) =>
         this.hand.some((card) => card.value === "Ace" && card.suit === suit)
       );
+      this.meldScore.acesAround = hasAllAces ? 10 : 0;
       return hasAllAces ? 10 : 0;
     },
     lookForKingsAround() {
@@ -188,6 +211,7 @@ export default {
       const hasAllKings = suits.every((suit) =>
         this.hand.some((card) => card.value === "King" && card.suit === suit)
       );
+      this.meldScore.kingsAround = hasAllKings ? 8 : 0;
       return hasAllKings ? 8 : 0;
     },
     lookForQueensAround() {
@@ -198,6 +222,7 @@ export default {
       const hasAllQueens = suits.every((suit) =>
         this.hand.some((card) => card.value === "Queen" && card.suit === suit)
       );
+      this.meldScore.queensAround = hasAllQueens ? 6 : 0;
       return hasAllQueens ? 6 : 0;
     },
     lookForJacksAround() {
@@ -208,6 +233,7 @@ export default {
       const hasAllJacks = suits.every((suit) =>
         this.hand.some((card) => card.value === "Jack" && card.suit === suit)
       );
+      this.meldScore.jacksAround = hasAllJacks ? 4 : 0;
       return hasAllJacks ? 4 : 0;
     },
     lookForRoyalMarriages() {
@@ -229,12 +255,18 @@ export default {
         score = this.containsRun ? 0 : 4;
         score += this.containsDoubleRun ? 0 : 4; // If double run is not found, add points for each marriage
       }
+      this.meldScore.royalMarriages = score;
       return score;
     },
     lookForDix() {
       // Method to look for a Dix in the hand
       // A Dix is the Nine of Trump
       // A Dix is worth 1 point
+      this.meldScore.dix = this.hand.some(
+        (card) => card.value === "9" && card.suit === this.trumpSuit
+      )
+        ? 1
+        : 0;
       return this.hand.some(
         (card) => card.value === "9" && card.suit === this.trumpSuit
       )
@@ -254,8 +286,10 @@ export default {
       );
       if (hasRun) {
         this.containsRun = true;
+        this.meldScore.run = 15;
         return 15;
       }
+
       return 0;
     },
     lookForDoubleRun() {
@@ -272,6 +306,7 @@ export default {
       });
       if (hasDoubleRun) {
         this.containsDoubleRun = true;
+        this.meldScore.doubleRun = 150;
         return 150;
       }
       return 0;
