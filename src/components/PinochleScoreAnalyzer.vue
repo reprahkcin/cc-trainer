@@ -3,6 +3,7 @@
     <h3>Hand Analysis</h3>
     <button class="btn btn-primary" @click="dealNewHand">Deal New Hand</button
     ><button class="btn btn-primary" @click="sortHand">Sort Hand</button>
+    <button class="btn btn-primary" @click="scoreHand">Score Hand</button>
 
     <div class="form-check form-switch">
       <input
@@ -14,6 +15,16 @@
       <label class="form-check-label" for="ascendingToggle">{{
         ascending ? "Ascending" : "Descending"
       }}</label>
+    </div>
+
+    <div class="form-group">
+      <label for="trumpSuitSelect">Trump Suit:</label>
+      <select class="form-control" id="trumpSuitSelect" v-model="trumpSuit">
+        <option value="spades">Spades</option>
+        <option value="hearts">Hearts</option>
+        <option value="clubs">Clubs</option>
+        <option value="diamonds">Diamonds</option>
+      </select>
     </div>
 
     <div class="score">
@@ -49,6 +60,15 @@ export default {
       hand: [],
       sortedHand: [],
       ascending: true,
+      trumpSuit: "",
+      containsRun: false,
+      containsDoubleRun: false,
+      suitScore: {
+        spades: 0,
+        hearts: 0,
+        diamonds: 0,
+        clubs: 0,
+      },
     };
   },
   computed: {
@@ -81,13 +101,116 @@ export default {
         this.isSorted = true;
       });
     },
+    scoreHand() {
+      // Method to score the hand
+      // This method should call all of the other methods to look for the various melds
+      // This method should also calculate the score for the hand
+      this.lookForPinochles();
+      this.lookForDoublePinochles();
+      this.lookForAcesAround();
+      this.lookForDoubleAcesAround();
+      this.lookForKingsAround();
+      this.lookForDoubleKingsAround();
+      this.lookForQueensAround();
+      this.lookForDoubleQueensAround();
+      this.lookForJacksAround();
+      this.lookForDoubleJacksAround();
+      this.lookForCommonMarriages();
+      if (this.trumpSuit !== "") {
+        // If the trump suit is not set, then the hand is not scored beyond the universal melds
+        this.lookForDix();
+        this.lookForRun();
+        this.lookForDoubleRun();
+        this.lookForRoyalMarriages();
+      }
+    },
     drawnCardImage(code) {
       return require(`@/assets/img/cards/${code}.png`);
     },
-    // Method to sort the hand by suit and rank
+    lookForCommonMarriages() {
+      // Method to look for a marriage in the hand
+      // A marriage is a King and Queen of the same suit
+      // A marriage is worth 2 points
+    },
+    lookForPinochles() {
+      // Method to look for a pinochle in the hand
+      // A pinochle is a Jack of Diamonds and a Queen of Spades
+      // A pinochle is worth 4 points
+    },
+    lookForDoublePinochles() {
+      // Method to look for a double pinochle in the hand
+      // A double pinochle is two Jacks of Diamonds and two Queens of Spades
+      // A double pinochle is worth 30 points
+    },
+    lookForAcesAround() {
+      // Method to look for Aces Around in the hand
+      // An Ace Around is an Ace of each suit
+      // An Ace Around is worth 10 points
+    },
+    lookForKingsAround() {
+      // Method to look for Kings Around in the hand
+      // A King Around is a King of each suit
+      // A King Around is worth 8 points
+    },
+    lookForQueensAround() {
+      // Method to look for Queens Around in the hand
+      // A Queen Around is a Queen of each suit
+      // A Queen Around is worth 6 points
+    },
+    lookForJacksAround() {
+      // Method to look for Jacks Around in the hand
+      // A Jack Around is a Jack of each suit
+      // A Jack Around is worth 4 points
+    },
+    lookForRoyalMarriages() {
+      // Method to look for Trump Marriages in the hand
+      // A Royal Marriage is a King and Queen of the trump suit
+      // A Royal Marriage is worth 4 points
+      // if one is found, and this.containsRun is false, then add 4 points to the score
+      // if one is found, and this.containsRun is true, add 0 to the score
+      // if two are found, and this.containsDoubleRun is false, then add 8 points to the score
+      // if two are found, and this.containsDoubleRun is true, add 0 to the score
+    },
+    lookForDix() {
+      // Method to look for a Dix in the hand
+      // A Dix is the Nine of Trump
+      // A Dix is worth 1 point
+    },
+    lookForRun() {
+      // Method to look for a Run in the hand
+      // A Run is A-10-K-Q-J in the same suit
+      // A Run is worth 15 points
+      // if found set this.containsRun to true
+    },
+    lookForDoubleRun() {
+      // Method to look for a Double Run in the hand
+      // A Double Run is A-A-10-10-K-K-Q-Q-J-J in the same suit
+      // A Double Run is worth 150 points
+      // if found set this.containsDoubleRun to true
+    },
+    lookForDoubleAcesAround() {
+      // Method to look for Double Aces Around in the hand
+      // A Double Ace Around is two Aces of each suit
+      // A Double Ace Around is worth 100 points
+    },
+    lookForDoubleKingsAround() {
+      // Method to look for Double Kings Around in the hand
+      // A Double King Around is two Kings of each suit
+      // A Double King Around is worth 80 points
+    },
+    lookForDoubleQueensAround() {
+      // Method to look for Double Queens Around in the hand
+      // A Double Queen Around is two Queens of each suit
+      // A Double Queen Around is worth 60 points
+    },
+    lookForDoubleJacksAround() {
+      // Method to look for Double Jacks Around in the hand
+      // A Double Jack Around is two Jacks of each suit
+      // A Double Jack Around is worth 40 points
+    },
   },
   created() {
-    this.sortHand();
+    this.dealNewHand();
   },
 };
 </script>
