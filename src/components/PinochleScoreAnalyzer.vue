@@ -3,6 +3,19 @@
     <h3>Hand Analysis</h3>
     <button class="btn btn-primary" @click="dealNewHand">Deal New Hand</button
     ><button class="btn btn-primary" @click="sortHand">Sort Hand</button>
+
+    <div class="form-check form-switch">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="ascendingToggle"
+        v-model="ascending"
+      />
+      <label class="form-check-label" for="ascendingToggle">{{
+        ascending ? "Ascending" : "Descending"
+      }}</label>
+    </div>
+
     <div class="score">
       <p>Meld Points:</p>
       <!-- Additional analysis and breakdown can be displayed here -->
@@ -32,8 +45,10 @@ export default {
   data() {
     return {
       isSorted: false,
+      isSorting: false,
       hand: [],
       sortedHand: [],
+      ascending: true,
     };
   },
   computed: {
@@ -57,8 +72,11 @@ export default {
       this.hand = hand;
     },
     sortHand() {
-      // Compare hand to the ordered deck to sort the hand
-      this.sortedHand = [...this.hand].sort((a, b) => a.id - b.id);
+      if (this.ascending) {
+        this.sortedHand = this.hand.sort((a, b) => a.id - b.id);
+      } else {
+        this.sortedHand = this.hand.sort((a, b) => b.id - a.id);
+      }
       this.$nextTick(() => {
         this.isSorted = true;
       });
