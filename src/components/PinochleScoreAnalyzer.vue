@@ -131,36 +131,84 @@ export default {
       // Method to look for a marriage in the hand
       // A marriage is a King and Queen of the same suit
       // A marriage is worth 2 points
+      let score = 0;
+      const suits = ["Spades", "Hearts", "Diamonds", "Clubs"];
+      suits.forEach((suit) => {
+        const hasKing = this.hand.some(
+          (card) => card.value === "King" && card.suit === suit
+        );
+        const hasQueen = this.hand.some(
+          (card) => card.value === "Queen" && card.suit === suit
+        );
+        if (hasKing && hasQueen) {
+          score += 2;
+        }
+      });
+      return score;
     },
     lookForPinochles() {
       // Method to look for a pinochle in the hand
       // A pinochle is a Jack of Diamonds and a Queen of Spades
       // A pinochle is worth 4 points
+      const hasJackOfDiamonds = this.hand.some(
+        (card) => card.value === "Jack" && card.suit === "Diamonds"
+      );
+      const hasQueenOfSpades = this.hand.some(
+        (card) => card.value === "Queen" && card.suit === "Spades"
+      );
+      return hasJackOfDiamonds && hasQueenOfSpades ? 4 : 0;
     },
     lookForDoublePinochles() {
       // Method to look for a double pinochle in the hand
       // A double pinochle is two Jacks of Diamonds and two Queens of Spades
       // A double pinochle is worth 30 points
+      const countJackOfDiamonds = this.hand.filter(
+        (card) => card.value === "Jack" && card.suit === "Diamonds"
+      ).length;
+      const countQueenOfSpades = this.hand.filter(
+        (card) => card.value === "Queen" && card.suit === "Spades"
+      ).length;
+      return countJackOfDiamonds >= 2 && countQueenOfSpades >= 2 ? 30 : 0;
     },
     lookForAcesAround() {
       // Method to look for Aces Around in the hand
       // An Ace Around is an Ace of each suit
       // An Ace Around is worth 10 points
+      const suits = ["Spades", "Hearts", "Diamonds", "Clubs"];
+      const hasAllAces = suits.every((suit) =>
+        this.hand.some((card) => card.value === "Ace" && card.suit === suit)
+      );
+      return hasAllAces ? 10 : 0;
     },
     lookForKingsAround() {
       // Method to look for Kings Around in the hand
       // A King Around is a King of each suit
       // A King Around is worth 8 points
+      const suits = ["Spades", "Hearts", "Diamonds", "Clubs"];
+      const hasAllKings = suits.every((suit) =>
+        this.hand.some((card) => card.value === "King" && card.suit === suit)
+      );
+      return hasAllKings ? 8 : 0;
     },
     lookForQueensAround() {
       // Method to look for Queens Around in the hand
       // A Queen Around is a Queen of each suit
       // A Queen Around is worth 6 points
+      const suits = ["Spades", "Hearts", "Diamonds", "Clubs"];
+      const hasAllQueens = suits.every((suit) =>
+        this.hand.some((card) => card.value === "Queen" && card.suit === suit)
+      );
+      return hasAllQueens ? 6 : 0;
     },
     lookForJacksAround() {
       // Method to look for Jacks Around in the hand
       // A Jack Around is a Jack of each suit
       // A Jack Around is worth 4 points
+      const suits = ["Spades", "Hearts", "Diamonds", "Clubs"];
+      const hasAllJacks = suits.every((suit) =>
+        this.hand.some((card) => card.value === "Jack" && card.suit === suit)
+      );
+      return hasAllJacks ? 4 : 0;
     },
     lookForRoyalMarriages() {
       // Method to look for Trump Marriages in the hand
@@ -170,23 +218,63 @@ export default {
       // if one is found, and this.containsRun is true, add 0 to the score
       // if two are found, and this.containsDoubleRun is false, then add 8 points to the score
       // if two are found, and this.containsDoubleRun is true, add 0 to the score
+      let score = 0;
+      const hasKing = this.hand.some(
+        (card) => card.value === "King" && card.suit === this.trumpSuit
+      );
+      const hasQueen = this.hand.some(
+        (card) => card.value === "Queen" && card.suit === this.trumpSuit
+      );
+      if (hasKing && hasQueen) {
+        score = this.containsRun ? 0 : 4;
+        score += this.containsDoubleRun ? 0 : 4; // If double run is not found, add points for each marriage
+      }
+      return score;
     },
     lookForDix() {
       // Method to look for a Dix in the hand
       // A Dix is the Nine of Trump
       // A Dix is worth 1 point
+      return this.hand.some(
+        (card) => card.value === "9" && card.suit === this.trumpSuit
+      )
+        ? 1
+        : 0;
     },
     lookForRun() {
       // Method to look for a Run in the hand
       // A Run is A-10-K-Q-J in the same suit
       // A Run is worth 15 points
       // if found set this.containsRun to true
+      const runValues = ["Ace", "10", "King", "Queen", "Jack"];
+      const hasRun = runValues.every((value) =>
+        this.hand.some(
+          (card) => card.value === value && card.suit === this.trumpSuit
+        )
+      );
+      if (hasRun) {
+        this.containsRun = true;
+        return 15;
+      }
+      return 0;
     },
     lookForDoubleRun() {
       // Method to look for a Double Run in the hand
       // A Double Run is A-A-10-10-K-K-Q-Q-J-J in the same suit
       // A Double Run is worth 150 points
       // if found set this.containsDoubleRun to true
+      const runValues = ["Ace", "10", "King", "Queen", "Jack"];
+      const hasDoubleRun = runValues.every((value) => {
+        const count = this.hand.filter(
+          (card) => card.value === value && card.suit === this.trumpSuit
+        ).length;
+        return count >= 2;
+      });
+      if (hasDoubleRun) {
+        this.containsDoubleRun = true;
+        return 150;
+      }
+      return 0;
     },
     lookForDoubleAcesAround() {
       // Method to look for Double Aces Around in the hand
