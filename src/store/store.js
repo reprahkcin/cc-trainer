@@ -31,7 +31,7 @@ export default createStore({
         shuffleDeck({ commit }) {
             commit('SHUFFLE_DECK')
         },
-        shufflePinochle({ commit }) {
+        shufflePinochleDeck({ commit }) {
             commit('SHUFFLE_PINOCHLE')
         }
     },
