@@ -1,4 +1,5 @@
-# cc-trainer
+# Card Game Memory Trainer
+This app is designed to help users train memory skills associated with common card games. 
 
 ## Project setup
 ```
