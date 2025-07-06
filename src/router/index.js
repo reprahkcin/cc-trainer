@@ -1,5 +1,6 @@
 
 import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '@/views/HomeView.vue';
 import BlackJackView from '@/views/BlackJackView.vue';
 import PokerView from '@/views/PokerView.vue';
 import PinochleView from '@/views/PinochleView.vue';
@@ -8,7 +9,8 @@ import CribbageView from '@/views/CribbageView.vue';
 const routes = [
   {
     path: '/',
-    redirect: '/blackjack', // Redirect to a default route if needed
+    name: 'HomeView',
+    component: HomeView,
   },
   {
     path: '/blackjack',

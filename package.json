@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint",
     "deploy": "npm run build && gh-pages -d dist"
   },
+  "homepage": "https://reprahkcin.github.io/cc-trainer",
   "dependencies": {
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.2",
